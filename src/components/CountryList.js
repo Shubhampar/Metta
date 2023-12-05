@@ -1,55 +1,3 @@
-// // CountryList Component
-// import React from 'react';
-// import { Box, Heading, UnorderedList, ListItem, Image, Text } from '@chakra-ui/react';
-
-// const CountryList = ({ countries }) => {
-//   return (
-//     <Box>
-//       <Heading as="h2" size="md" mb={4}>
-//         Associated Countries
-//       </Heading>
-//       <UnorderedList>
-//         {countries.map((country, index) => (
-//           <ListItem
-//             key={index}
-//             display="flex"
-//             alignItems="center"
-//             mb={2}
-//             borderRadius="md"
-//             p={2}
-//             bg="gray.100"
-//             _hover={{
-//               cursor: 'pointer',
-//               backgroundColor: 'gray.200', // Change background color on hover
-//             }}
-//           >
-//             <Box
-//               boxSize="30px"
-//               borderRadius="50%"
-//               marginRight="10px"
-//               transition="transform 0.2s"
-//               _hover={{
-//                 transform: 'scale(1.1)', // Scale up on hover
-//               }}
-//             >
-//               {country.flags && country.flags.png ? (
-//                 <Image src={country.flags.png} boxSize="30px" borderRadius="50%" />
-//               ) : (
-//                 <Box w="30px" h="30px" backgroundColor="gray.200" borderRadius="50%" />
-//               )}
-//             </Box>
-//             <Text fontSize="md" fontWeight="bold">
-//               {country.name && country.name.common ? country.name.common : 'Country Name Unavailable'}
-//             </Text>
-//           </ListItem>
-//         ))}
-//       </UnorderedList>
-//     </Box>
-//   );
-// };
-
-// export default CountryList;
-
 
 // CountryList Component
 import React from 'react';
@@ -83,17 +31,17 @@ const CountryList = ({ countries }) => {
               marginRight={{ base: '10px', md: '20px' }} // Adjust margin based on screen size
               transition="transform 0.2s"
               _hover={{
-                transform: 'scale(1.1)',
+                transform: 'scale(2.0)',
               }}
             >
               {country.flags && country.flags.png ? (
-                <Image src={country.flags.png} boxSize="100%" borderRadius="50%" />
+                <Image src={country.flags.png} boxSize="40px" borderRadius="50%" alt={`${country.name} Flag`} />
               ) : (
-                <Box w="100%" h="100%" backgroundColor="gray.200" borderRadius="50%" />
+                <Box w="40px" h="40px" backgroundColor="gray.200" borderRadius="50%" />
               )}
             </Box>
-            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight="bold"> {/* Adjust font size based on screen size */}
-              {country.name && country.name.common ? country.name.common : 'Country Name Unavailable'}
+            <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight="medium" color="gray.800">
+              <strong>{country.name.common}</strong> - Population: {country.population}
             </Text>
           </ListItem>
         ))}

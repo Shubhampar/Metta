@@ -50,10 +50,10 @@ function App() {
       <Box mt={{ base: 4, md: 6 }}>
         {loading && <Spinner size="lg" color="blue.500" />}
         {error && (
-          <Alert status="error" my={{ base: 4, md: 6 }}>
-            <AlertIcon />
-            {error}
-          </Alert>
+          <Alert status="error" my={{ base: 4, md: 6 }} bg="red.100" color="red.800">
+          <AlertIcon />
+          {error}
+        </Alert>
         )}
         <CountryList countries={countries} />
       </Box>
