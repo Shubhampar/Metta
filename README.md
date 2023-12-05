@@ -1,15 +1,15 @@
-currency-to-country-search/
+###currency-to-country-search/
 │
-├── src/
-│   ├── components/
-│   │   ├── SearchBar.js
-│   │   └── CountryList.js
+├── *src/
+│   ├── *components/
+│   │   ├── *SearchBar.js
+│   │   └── *CountryList.js
 │   │
-│   ├── App.js
-│   └── index.js
+│   ├── *App.js
+│   └── *index.js
 │
-├── package.json
-└── README.md
+├── *package.json
+└── *README.md
 
 #HOW TO GO THROUGH THE PROJECT -
 *First of all open the page, write the currency code, and then enter the search button it will show the desired result below.
